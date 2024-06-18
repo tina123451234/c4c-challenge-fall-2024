@@ -6,16 +6,21 @@ import React from 'react';
 */
 
 function PartnerTile({ partnerData }) {
-
+  const Partner = ({ partner, deletePartner }) => {
   return (
-    <div className="partner-tile">
-      <img className="partner-thumbnail" src='' />
+    <div className="partnerTile">
+      <img className="partnerLogo" src='' />
       <hr />
-      <div className="partner-info">
-        This is some placeholder content - you'll need to replace the content here with actual partner information.
+      <div className="partnerDescr">
+        <h2> {partner.name} </h2>
+        <img src={partner.logo} style={{ width: '100px', height: '100px' }} />
+        <p>{partner.description}</p>
+        <p>{partner.active ? 'Active' : 'Not Active'}</p>
+        <button onClick={() => deletePartner(partner.name)}>Delete</button>
       </div>
     </div>
-  )
-}
+    )
+  };
+}  
 
 export default PartnerTile;
