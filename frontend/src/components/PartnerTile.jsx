@@ -8,13 +8,13 @@ import React from 'react';
 function PartnerTile({ partnerData }) {
   const Partner = ({ partner, deletePartner }) => {
   return (
-    <div className="partnerTile">
+    <div className="partner-tile">
       <img className="partnerLogo" src='' />
       <hr />
       <div className="partnerDescr">
         <h2> {partner.name} </h2>
-        <img src={partner.logo} style={{ width: '100px', height: '100px' }} />
-        <p>{partner.description}</p>
+        <img className ="partner-thumbnail" src={partner.logo} />
+        <p className="partner-info">{partner.description}</p>
         <p>{partner.active ? 'Active' : 'Not Active'}</p>
         <button onClick={() => deletePartner(partner.name)}>Delete</button>
       </div>
