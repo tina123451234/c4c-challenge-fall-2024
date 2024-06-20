@@ -14,13 +14,22 @@ function Dashboard() {
     fetch('http://localhost:4000', {
       method: 'GET',
     })
-    .then((res) => res.json())
-  }, [])
-
+    .then((res) => {
+      return res.json();
+      })
+      .then((data) => {
+        console.log('Fetched partners:', data);
+        setPartners(data);
+      })
+    }, []);
+  
+  
   return (
     <div id="main-content">
       <div id="main-partners-grid">
-        <PartnerTile partnerData={{}} />
+      {Object.values(partners).map((partner, index) => (
+          <PartnerTile key={index} partner={partner} />
+        ))}
       </div>
     </div>
   )
