@@ -24,6 +24,7 @@ git clone https://github.com/huang0h/c4c-challenge-fall-2024.git
 
 Overview
 - This website aims to create a simple form to take in new partner information and stores it as tiles on the website. There would also be a button to delete the outdated partners.
+
 Reflection
 - Although the webiste is bare minimum, I tried to focus mostly on implementing the necessary key functions as I feel like I have a better understanding of how to change the looks of the webiste rather than the implementation of the elements. By focusing on the elements I was able to learn so much different techniques and frontend to backend communication. Even so, I have zero experience with React, javascript, so everything was a huge learning curve for me. I ended up watching a ton of Youtube tutorials, articles (Medium had a suprisingly large amounts of articles on React), React documentation, and other coding websites, where I ended up implementing this giant mash up of code that fortunately compiles and runs. 
 
