@@ -17,13 +17,14 @@ function AddPartnerForm() {
         }));
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(inputs);
-    }
+    } 
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form class = "AddPartnerForm" onSubmit={handleSubmit}>
+            <div class="submission-box-text-inputs">
             <label>
                 Partner Name:
                 <input 
@@ -63,8 +64,9 @@ function AddPartnerForm() {
                     onChange={handleChange}
                 />
             </label>
+            </div>
             <br />          
-            <input type="submit" />
+            <input type="submit" class= "submission-box" />
         </form>
     )
 }
